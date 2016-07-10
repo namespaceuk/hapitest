@@ -1,0 +1,11 @@
+{
+	"dev": {
+		"host": "RICH-LT",
+		"user": { "ENV" : "node" },
+		"password" : { "ENV" : "mercer" },
+		"database": "sakila",
+		"driver": "mysql",
+		"multipleStatements": true
+	},
+	"sql-file" : true
+}
