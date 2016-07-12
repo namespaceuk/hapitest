@@ -15,7 +15,10 @@ function ReplyHelper(request, reply) {
 }
 
 ReplyHelper.prototype.replyFindOne = function replyFindOne(err, data) {
-	if (err) { return this.reply(Hapi.error.badImplementation(err)); }
+	if (err) {
+		console.log(err.message); 
+		return this.reply(Hapi.error.badImplementation(err)); 
+	}
 
 	if (data[0]) {this.reply(data[0]).type('application/json');}
 	else { this.reply().code(404); }

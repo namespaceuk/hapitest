@@ -26,6 +26,7 @@ module.exports = function() {
 	externals.query = function(params) {
 		var sql = params.sql;
 		var values = params.values;
+		console.log("query values: " + values[0].actor_id);
 		var queryHandler = params.callback;
 		internals.connect(function(err, connection) {
 			if (err) return queryHandler(err, null);

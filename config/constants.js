@@ -40,7 +40,7 @@ module.exports = function() {
 				'database' : ''
 			},
 			'development' : {
-				'host' : 'localhost',
+				'host' : 'Rich-LT',
 				'user' : 'node',
 				'password' : 'mercer',
 				'database' : 'sakila'

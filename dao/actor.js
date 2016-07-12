@@ -6,13 +6,12 @@ function ActorDAO(){};
 ActorDAO.prototype = (function(){
 
 	return {
-		findbyId: function findbyId(id, callback) {
+		findById: function findbyId(id, callback) {
 			var values = [
-				id
+				id.actor_id
 			];
 
-			var sql = 'SELECT actor_id, first_name, last_name from actor AS u '+
-				'WHERE u.actor_id = ? ';
+			var sql = 'SELECT actor_id, first_name, last_name from actor WHERE actor_id = ? ';
 			db.query({
 				sql : sql, 
 				values: values,

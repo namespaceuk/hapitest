@@ -11,12 +11,13 @@ function ActorController(){};
 ActorController.prototype = (function(){
 
 	return {
-		findByID: function findByID(request, reply) {
-			console.log("in actor controller");
+		findById: function findById(request, reply) {
+			console.log("*********in actor controller***********");
 			var helper = new ReplyHelper(request, reply);
-			var params = request.plugins.createControllerParams(request.params);
+		//	var params = request.plugins.createControllerParams(request.params);
+			var params = _.clone(request.params);
 
-			actorDAO.findByID(params, function (err, data) {
+			actorDAO.findById(params, function (err, data) {
 				helper.replyFindOne(err, data);
 			});
 		}
